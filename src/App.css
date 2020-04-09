@@ -1,0 +1,41 @@
+@media only screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 620px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+  .nav-link {
+    font-size: 12px;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.carousel-item img {
+  max-height: 100vh; 
+  object-fit: cover;
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: gray;
+}
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators .active {
+  background-color: aqua;
+}
