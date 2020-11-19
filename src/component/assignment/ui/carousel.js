@@ -1,15 +1,16 @@
 import React, {Fragment} from 'react';
 
+const imageList = [
+    {src: "la", alt: "First slide"},
+    {src: "chicago", alt: "Second slide"},
+    {src: "ny", alt: "Third slide"}
+];
+const slider = [
+    {className: 'carousel-control-prev', dataSlide: 'prev', classIcon: 'carousel-control-prev-icon', classText: 'Previous'},
+    {className: 'carousel-control-next', dataSlide: 'next', classIcon: 'carousel-control-next-icon', classText: 'Next'},
+]
+
 const Carousel = () => {
-    const imageList = [
-        {src: "la", alt: "First slide"},
-        {src: "chicago", alt: "Second slide"},
-        {src: "ny", alt: "Third slide"}
-    ];
-    const slider = [
-        {className: 'carousel-control-prev', dataSlide: 'prev', classIcon: 'carousel-control-prev-icon', classText: 'Previous'},
-        {className: 'carousel-control-next', dataSlide: 'next', classIcon: 'carousel-control-next-icon', classText: 'Next'},
-    ]
     return (
         <Fragment>
            <div className="row justify-content-center">
@@ -20,13 +21,13 @@ const Carousel = () => {
                             imageList.map((image, index) =>
                                 <li key={index} data-target="#carouselId" data-slide-to={index} className={index === 0 ? 'active' : ''}></li>
                             )
-                        }
+                        }                        
                     </ul>
                     <div className="carousel-inner" role="listbox">
                         {
                             imageList.map((image, index) =>
                             <div key={index} className={"carousel-item "+ (index === 0 ? 'active' : '')}>
-                                <img src={require(`../images/${image.src}.jpg`)} alt={image.alt} />
+                                <img src={require(`../../../images/${image.src}.jpg`)} alt={image.alt} />
                             </div>
                             )
                         }
